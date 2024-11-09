@@ -26,6 +26,11 @@ def init_app():
     def home():
         return "Welcome to home!"
 
+    # include all routes
+    from Controller import post
+    
+    app.include_router(post.router)
+
     return app
 
 
